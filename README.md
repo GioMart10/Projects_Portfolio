@@ -13,4 +13,4 @@ Some projects could combine 2 categories (Ex. SQL with PowerBI) In those cases t
 ## About Me
 Hi everyone!
 
-My name is Giovanni Martiradoni. Welcome to my Project Portfolio! A little of my background. I graduated as an 
+My name is Giovanni Martiradoni. Welcome to my Project Portfolio! A little of my background. I made a finance and accounting degree at UNAM (National Autonomous University of Mexico)
