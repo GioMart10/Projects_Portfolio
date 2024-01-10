@@ -1,4 +1,3 @@
-# Python Projects
+# Data Visualization Projects
 ## Introduction
-Python was the second programing language I learned. At first, I started learning this lenguage for data analysis purposes but when I heard about ML and Deep learning, I got pretty interested in this category of Data Science.
-This repository holds my personal and learning projects.
+In my personal opinion, data visualization is the most dynamic and entertaining part of data analysis. In this repository you will find some of the dashboards I´ve made in my job and with my personal projects.
