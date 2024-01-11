@@ -1,13 +1,5 @@
 # Forwarder Sales Analysis (PP)
 
-## Table of contents
-- [Project Overview](#project-overview)
-- [Data Sources](#data-sources)
-- [Tools Used](#tools-used)
-- [Data Cleaning and Preparation](#data-cleaning-and-preparation)
-
-
-
 ### Project Overview
 This data analysis dashboard is designed to provide insight into a carrier's sales performance, top routes, profit and volume per month/year. By analyzing these aspects of the data, we seek to identify trends over the years, make data-driven decisions for our contract negotiations, and gain a deeper understanding of the customer's volume and profit performance.
 
@@ -34,7 +26,7 @@ EDA involved exploring the sales data to answer key questions such as:
 - More volume = more profit?
 - What are the top suppliers (carriers) used per TEU's Volume over the year?
 
-### Findings (Story Telling)
+### Findings
 The main results can be summarized as follows:
 - The most profitable customer in 2023 until August was "Well Appliance" as the net profit suggests, this behavior could be considered as normal as the profit per TEU ratio has a good level considering the TEU's this customer moved througout the year. At the same time, if we consider the profit per TEU ratio, the most profitable customer is "PC World" with a ratio of 477 USD/TEU but the volume development was low as we started working with them again in September if the company continues to do business with them, this customer could be a very profitable one.
 - Following the first point, another key customer such as "Earphone Tech" had 18% of the total volume of 2023 (TOP 1 customer by volume through the year), but considering our profit per TEU ratio, is one of the worst performing customers historically. With this in mind, we can see that more volume does not mean more profit if we cannot mantain a break-even point.
