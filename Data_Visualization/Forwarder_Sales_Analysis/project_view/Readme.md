@@ -1,1 +1,3 @@
-
+# Project View
+As I couldn´t publish the dashboard using Power BI cloud tool, I recorded a very short video using OBS to show the dashboard in action.
+I hope this could be useful to understand this report. Regards! :)
