@@ -1,3 +1,3 @@
 # SQL  Projects
 
-SQL is the first programming language I learned
+SQL is the first programming language I learned. 
