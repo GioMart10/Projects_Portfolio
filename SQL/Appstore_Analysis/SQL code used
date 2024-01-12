@@ -1,0 +1,76 @@
+-- check the number of unique apps in both tables(are there the same number of apps?)
+SELECT COUNT(DISTINCT id) AS UniqueAppIDs
+FROM AppleStore
+
+SELECT COUNT(DISTINCT id) AS UniqueAppIDs
+FROM appleStore_description
+
+-- check for missing values in key fields
+SELECT COUNT(*) AS Missing_Values
+FROM AppleStore
+WHERE track_name IS NULL OR user_rating IS NULL OR prime_genre IS NULL
+
+SELECT COUNT(*) AS missing_Values
+FROM appleStore_description
+WHERE app_desc IS NULL
+
+-- Finding the number of apps per genre
+SELECT prime_genre, COUNT(*) AS NumApps
+FROM AppleStore
+GROUP BY prime_genre
+ORDER BY NumApps DESC
+
+--Overview of the apps ratings
+SELECT min(user_rating) AS MinRating,
+	   max(user_rating) AS MaxRating,
+	   avg(user_rating) AS AvgRating
+FROM AppleStore
+
+--Determine whether paid apps have higher ratings than free apps
+SELECT CASE
+			WHEN price > 0 THEN "Paid"
+			ELSE "Free"
+		END AS App_type,
+		avg(user_rating) AS Avg_rating
+FROM AppleStore
+GROUP BY App_type
+
+--Determine if apps with more supported languages have higher ratings
+SELECT CASE
+			WHEN lang_num < 10 THEN "<10 languages"
+			WHEN lang_num BETWEEN 10 AND 30 THEN "10-30 languages"
+			ELSE ">30 languages"
+		END AS language_num,
+		avg(user_rating) AS Avg_rating
+FROM AppleStore
+GROUP BY language_num
+ORDER BY Avg_rating DESC
+
+--Check genres with low ratings
+SELECT prime_genre,
+	   avg(user_rating) as Avg_rating
+FROM AppleStore
+GROUP BY prime_genre
+ORDER BY Avg_rating ASC
+
+--Check if there is correlation between the lenght of app description and user rating_count_tot
+SELECT CASE
+			WHEN length(b.app_desc)<500 THEN "Short"
+			WHEN length(b.app_desc) BETWEEN 500 AND 1000 THEN "Medium"
+			ELSE "Long"
+		END AS description_lenght_bucket,
+		avg(a.user_rating) AS average_rating
+
+FROM AppleStore as a
+JOIN appleStore_description AS b
+ON a.id = b.id
+GROUP BY description_lenght_bucket
+ORDER BY average_rating DESC
+
+--Check the top-rated apps for each genre
+SELECT prime_genre, track_name, user_rating
+FROM(
+	 SELECT prime_genre, track_name, user_rating,
+	 RANK() OVER(PARTITION BY prime_genre ORDER BY user_rating DESC, rating_count_tot DESC) AS rank
+	 FROM AppleStore) AS a
+WHERE a.rank = 1
