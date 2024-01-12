@@ -22,6 +22,10 @@ EDA involved on this project was about practicing the lenguage to answer questio
 
 ## Findings
 The main results can be summarized as follows:
-- The most
+- The genre with the most apps developed was "Games" with 3862 apps in the dataset.
+- The average rating of all apps is 3.53 out of 5.
+- The genre with the lowest average rating is "Catalogs" with 2.1 out of 5 and the genre with the highest average rating is "Productivity" with 4 out of 5.
+- If we compare the ratings of free and paid apps, they are quite close as the free apps had an average rating of 3.38 and the paid apps had an average rating of 3.72.
+
 ## Limitations
 - Although the datasets were considering data from an App Store, it was missing key info about downloads number per app.
