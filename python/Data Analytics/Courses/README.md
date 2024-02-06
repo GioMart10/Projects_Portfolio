@@ -1,1 +1,1 @@
-d
+Hello Again! In this folder you will find the projects I have made or I'm doing while I'm learning about Data Analitycs using python libraries. Generally the courses I'm learning of are from youtube or project I could find useful in this platform. 
