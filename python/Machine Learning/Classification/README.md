@@ -1,0 +1,1 @@
+Hello everyone! In this folder you will find project I did while I was learning about classification in machine learning course. This project is was about classiffying the type of potential customers considering their age and income for social network ads.
